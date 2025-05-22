@@ -1,6 +1,6 @@
 import cv2
 
-cap = cv2.VideoCapture(1)  # Try changing 0 to 1 or 2 if needed
+cap = cv2.VideoCapture(0)  # Try changing 0 to 1 or 2 if needed
 
 if not cap.isOpened():
     print("❌ Cannot open webcam")

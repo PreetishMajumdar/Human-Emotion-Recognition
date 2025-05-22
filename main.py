@@ -8,7 +8,7 @@ def load_fer2013(batch_size=64):
 import cv2
 from ultralytics import YOLO
 
-model = YOLO('yolov8n.pt')
+model = YOLO('runs/detect/emotion_yolov8n/weights/best.pt')
 
 cap = cv2.VideoCapture(1)
 
