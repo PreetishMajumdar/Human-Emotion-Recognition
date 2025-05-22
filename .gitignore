@@ -1,0 +1,27 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Ultralytics YOLO files
+runs/
+results/
+models/
+*.pt
+*.onnx
+
+# Datasets
+datasets/
+!datasets/emotion/dataset.yaml  # Keep config if needed
+
+# KaggleHub temp files
+*.kagglehub/
+.kaggle/
+
+# System files
+.DS_Store
+Thumbs.db
+
+# VS Code config
+.vscode/
+.env
