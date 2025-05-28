@@ -1,0 +1,5 @@
+ultralytics 
+opencv-python 
+kagglehub 
+dotenv 
+scikit-learn

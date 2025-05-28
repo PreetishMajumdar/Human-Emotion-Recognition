@@ -24,4 +24,4 @@ Thumbs.db
 
 # VS Code config
 .vscode/
-.env
+.venv
