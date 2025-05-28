@@ -13,6 +13,7 @@ models/
 # Datasets
 datasets/
 !datasets/emotion/dataset.yaml  # Keep config if needed
+Dataset/
 
 # KaggleHub temp files
 *.kagglehub/
