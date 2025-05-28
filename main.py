@@ -2,8 +2,10 @@ import cv2
 import numpy as np
 import tensorflow as tf
 
-# Load the trained model
-model = tf.keras.models.load_model("Models/emotion.h5")
+# Load both trained models
+model_1 = tf.keras.models.load_model("Models/new_best_1.h5")
+model_2 = tf.keras.models.load_model("Models/emotion_model.h5")
+
 
 # Emotion labels and corresponding emoji characters
 emotion_labels = ['angry', 'disgust', 'fear', 'happy', 'neutral', 'sad', 'surprise']
@@ -60,7 +62,16 @@ while True:
         roi_normalized = roi_resized / 255.0
         roi_reshaped = np.reshape(roi_normalized, (1, img_size, img_size, 1))
 
-        prediction = model.predict(roi_reshaped, verbose=0)
+        pred1 = model_1.predict(roi_reshaped, verbose=0)
+        pred2 = model_2.predict(roi_reshaped, verbose=0)
+        # Select the one with the highest confidence overall
+        max_conf1 = np.max(pred1)
+        max_conf2 = np.max(pred2)
+
+        if max_conf1 >= max_conf2:
+            prediction = pred1
+        else:
+            prediction = pred2
         emotion_idx = np.argmax(prediction)
         emotion_text = emotion_labels[emotion_idx]
         emoticon = emoticon_chars[emotion_text]
