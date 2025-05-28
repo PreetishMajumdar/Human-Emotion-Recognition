@@ -11,6 +11,8 @@ This project implements a real-time emotion detection system using **YOLOv8** fo
 - Threaded video stream support for low-latency capture.
 - ONNX export for model portability.
 
+Dataset Link: https://www.kaggle.com/datasets/msambare/fer2013
+
 ---
 
 ## 📁 Directory Structure
