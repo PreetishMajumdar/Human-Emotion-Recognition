@@ -26,4 +26,5 @@ Thumbs.db
 # VS Code config
 .vscode/
 .venv
-Dataset
+Dataset 
+*.zip

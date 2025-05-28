@@ -3,7 +3,7 @@ import numpy as np
 import tensorflow as tf
 
 # Load the trained model
-model = tf.keras.models.load_model("emotion_model.h5")
+model = tf.keras.models.load_model("Models/emotion.h5")
 
 # Emotion labels and corresponding emoji characters
 emotion_labels = ['angry', 'disgust', 'fear', 'happy', 'neutral', 'sad', 'surprise']
@@ -88,7 +88,7 @@ while True:
 
     frame_count += 1
     if frame_count % 100 == 0 and frame_emoticons:
-        with open("emotions_log.txt", "a", encoding="utf-8") as file:
+        with open("logs/emotions_log.txt", "a", encoding="utf-8") as file:
             file.write(" ".join(frame_emoticons) + "\n")
         print(f"Logged emoticons at frame {frame_count}: {' '.join(frame_emoticons)}")
 
