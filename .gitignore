@@ -6,7 +6,6 @@ __pycache__/
 # Ultralytics YOLO files
 runs/
 results/
-models/
 *.pt
 *.onnx
 
