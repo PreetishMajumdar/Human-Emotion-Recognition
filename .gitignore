@@ -8,6 +8,8 @@ runs/
 results/
 *.pt
 *.onnx
+logs/
+
 
 # Datasets
 datasets/
